@@ -4,7 +4,7 @@ function PostForm() {
     const [myData, setMyData] = useState([])
 
     useEffect( () => {
-        fetch("http://localhost:9292/project_managers")
+        fetch("https://rojia-sinatra.herokuapp.com/project_managers")
         .then(res => res.json())
         .then(data => setMyData(data))
     },[])
@@ -26,7 +26,7 @@ function PostForm() {
     function handleSubmit(e) {
         e.preventDefault();
 
-        fetch("http://localhost:9292/project_managers", {
+        fetch("https://rojia-sinatra.herokuapp.com/project_managers", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function PostForm() {
                                 <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{item.age}</span>
                                 <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{item.experience}</span>
                             </div>
-                            <div>
+                            {/* <div>
                                 <div>
                                     <img class="w-full" src="images/pm.jpeg" alt="Sunset in the mountains" />
                                 </div>
@@ -65,7 +65,11 @@ function PostForm() {
                                     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{item.age}</span>
                                     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{item.experience}</span>
                                 </div>
-                            </div>
+                            </div> */}
+                    </div>
+
+                    <div>
+
                     </div>
                 </div>
 
