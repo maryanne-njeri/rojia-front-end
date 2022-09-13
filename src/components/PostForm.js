@@ -52,9 +52,9 @@ function PostForm() {
                                 <div class="font-bold text-xl mb-2">Project Manager</div>
                             </div>
                             <div class="px-6 pt-4 pb-2">
-                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{item.name}</span>
-                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{item.age}</span>
-                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{item.experience}</span>
+                                <h4 class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{item.name}</h4>
+                                <h4 class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{item.age}</h4>
+                                <h4 class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{item.experience}</h4>
                             </div>
                             {/* <div>
                                 <div>
@@ -99,13 +99,16 @@ function PostForm() {
                             <input id='symptomThree' placeholder='' name="experience" value={change.experience} onChange={handleChange} type='text' className='w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow'/>
                         </div>
                         <div>
-                        <input type="submit" className='border-2 border-yellow-600 rounded-full cursor-pointer uppercase hover:text-white hover:bg-yellow-600 px-6 py-1.5 transition duration-150'  />
+                        <input type="submit" value='Hire a manager' className='border-2 border-yellow-600 rounded-full cursor-pointer uppercase hover:text-white hover:bg-yellow-600 px-6 py-1.5 transition duration-150'  />
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-        {displayData}
+        
+        <div className="flex flex-wrap justify-between space-x-2 mt-12 px-12">
+            {displayData}
+        </div>
         </div>
 
     )
